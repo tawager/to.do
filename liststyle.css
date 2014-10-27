@@ -1,0 +1,268 @@
+/* Basic Style */
+body {
+    background-color: #dddddd;
+    font-family: Oswald, sans-serif;
+    height: 100%;
+
+}
+
+.appBackground {
+    position: absolute;
+    /*background-color: black;*/
+    background-color: #dddddd;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.todoLogo {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    display: inline-block;
+    height: 350px;
+    /*box-shadow: 0 0 30px 0 rgba(255, 255, 255, 1);*/
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .6);
+}
+
+
+.newEventForm {
+    display: block;
+    background: #fff;
+    width: 650px;
+    height: 100%;
+    margin: -300px auto 0;
+    padding: 0 10px;
+    position: relative;
+    /*box-shadow: 0 0 30px 0 rgba(255, 255, 255, 1);*/
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .6);
+
+
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li * {
+    float: left;
+}
+li, h3 {
+    clear:both;
+    list-style:none;
+}
+input, button {
+    outline: none;
+}
+button {
+    background: none;
+    border: 0;
+    color: #888;
+    font-size: 15px;
+    width: 60px;
+    margin: 10px 0 0;
+    font-family: Oswald, sans-serif;
+    cursor: pointer;
+    float: right;
+}
+button:hover {
+    color: #333;
+}
+
+
+/* Heading */
+
+h2,
+h3,
+label[for='new-task'] {
+    border-bottom: 2px solid #333;
+    text-transform: uppercase;
+    padding: 30px 0 10px;
+    color: #333;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    padding-top: 70px;
+}
+
+h3,
+label[for='new-task'] {
+
+    font-size: 15px;
+}
+
+input[type="text"] {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Oswald, sans-serif;
+    color: #888;
+}
+
+input[type="text"]:focus {
+    color: #333;
+}
+
+/* New Task */
+label[for='new-task'] {
+    display: block;
+    margin: 0 0 20px;
+}
+
+input#new-task {
+    float: left;
+    width: 200px;
+}
+
+input#new-date {
+    float: left;
+    width: 150px;
+    margin: 0 0 0 10px;
+    display: inline;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #888;
+    border-radius: 6px;
+    font-family: Oswald, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#setPriority {
+    display: inline;
+    margin: 0 5px 0 50px;
+    padding: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 18px;
+
+}
+
+label[for='setPriority'] {
+    font-size: 18px;
+    font-weight: 400;
+    font-variant: small-caps;
+    display: inline;
+    position: absolute;
+    left:  464px;
+    bottom: 520px;
+}
+
+
+select > option {
+    font-family: Oswald, sans-serif;
+    font-size: 18px;
+}
+
+p > button:hover {
+    color: #0FC57C;
+}
+
+/* Task list */
+li {
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+li > input[type="checkbox"] {
+    margin: 0 10px;
+    position: relative;
+    top: 15px;
+}
+li > label {
+    font-size: 18px;
+    line-height: 40px;
+    width: 237px;
+    padding: 0 0 0 11px;
+}
+
+span.dueDate {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    right: 0px;
+    top:  4px;
+    padding: 0;
+    margin: 0;
+}
+
+span.taskPriority {
+    position: relative;
+    left: 105px;
+}
+
+span > button {
+    margin-left: -10px;
+}
+
+li >  input[type="text"] {
+    width: 200px;
+}
+li > .delete:hover {
+    color: #CF2323;
+}
+
+/* Completed */
+#completed-tasks label {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#completed-tasks span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Edit Task */
+ul li input[type=text] {
+    display:none;
+}
+
+ul li.editMode input[type=text] {
+    display:block;
+}
+
+ul li.editMode label {
+    display:none;
+}
+
+ul li input[type=text] {
+    display:none;
+}
+
+ul li input[type=datetime-local] {
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #888;
+    border-radius: 6px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    float: left;
+    width: 150px;
+    margin: 0 0 0 10px;
+    display: inline;
+}
+
+ul li.editMode select {
+    display: inline;
+    margin: 8px 5px 0 18px;
+    padding: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 18px;
+}

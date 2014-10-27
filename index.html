@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDo WebApp</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="liststyle.css" type="text/css" media="screen" charset="utf-8">
+    <script src="jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<div class = "appBackground">
+    <img src="logoAP.JPG" class="todoLogo" title="todoLogo">
+<div class="newEventForm">
+    <p>
+        <label for="new-task">New.Task</label>
+        <input id="new-task" type="text" value="task">
+        <input id="new-date" type="datetime-local">
+        <label for = "setPriority">Priority</label>
+        <select id="setPriority" class="priority">
+            <option>-</option>
+            <option>1 !!!</option>
+            <option>2 !!</option>
+            <option>3 !</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <button>Create</button>
+    </p>
+
+    <h2>To.Do</h2>
+    <ul id="incomplete-tasks">
+        <li>
+            <input type="checkbox">
+            <label>Utility Bill Due</label>
+            <span class="dueDate">10/19/2014</span>
+            <span class="taskPriority">2 !!</span>
+            <input type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </li>
+        <li class="editMode">
+            <input type="checkbox">
+            <label>Grocery Shopping</label>
+            <input type="text" value="Grocery Shopping">
+            <input type="datetime-local" id="editDate" value="10/22/2014">
+            <select id="editPriority" class="priority">
+                <option>-</option>
+                <option>1 !!!</option>
+                <option>2 !!</option>
+                <option>3 !</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </li>
+
+    </ul>
+
+    <h3>Completed.Tasks</h3>
+    <ul id="completed-tasks">
+        <li>
+            <input type="checkbox" checked>
+            <label>Doctor Appt.</label>
+            <span class = "dueDate">10/06/2014</span>
+            <span class="taskPriority">1 !!!</span>
+            <input type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </li>
+    </ul>
+</div>
+</div>
+
+<script type="text/javascript" src="actions.js"></script>
+
+</body>
+</html>
