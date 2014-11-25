@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TO.DO</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="liststyle.css" type="text/css" media="screen" charset="utf-8">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="listscript.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id="due_soon" class="active"><a href="#">due soon</a></li>
+                    <li id="task_history"><a href="#">history</a></li>
+                    <li id="nav_drop" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">category <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li id="appointments_list"><a href="#">appts</a></li>
+                            <li id="supplies_list"><a href="#">supplies</a></li>
+                            <li id="chores_list"><a href="#">chores</a></li>
+                            <li class="divider"></li>
+                            <li id="home_filter"><a href="#">home</a></li>
+                            <li class="divider"></li>
+                            <li id="work_filter"><a href="#">work</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" id="search_tasks" class="form-control" placeholder="Search">
+                    </div>
+                    <button id="submit_search" type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+<div class="jumbotron">
+    <div class="container">
+    <p>live.do.work.be</p>
+    </div> 
+    <div class="user_photos">
+        <img id="banner_photo" src="Estes-banner.jpg">
+        <img id="profile_photo" src="profile2.jpg">
+    </div>
+</div>
+    <div class="form_wrapper">
+        <div id="newTaskForm">
+            <!-- Button trigger modal -->
+            <button type="button" id="taskFormLaunch" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+                new task form
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="new_event">
+                                <label for="new-task">New.Task</label>
+                                <input id="new-task" type="text" value="task">
+                                <input id="new-date" type="datetime-local" value="due-date">
+                                <label for = "setPriority">Priority</label>
+                                <select id="setPriority" class="priority">
+                                    <option>-</option>
+                                    <option>1 !!!</option>
+                                    <option>2 !!</option>
+                                    <option>3 !</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                <button id="create_task">Create</button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="all_tasks">
+        <h2>Incomplete.Tasks</h2>
+        <ul id="incomplete-tasks" class="">
+            <li class="task-item">
+                <input type="checkbox">
+                <label>Utility Bill Due</label>
+                <span class="dueDate">10/19/2014</span>
+                <span class="taskPriority">2 !!</span>
+                <input type="text">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </li>
+            <li class="task-item editMode">
+                <input type="checkbox">
+                <label>Grocery Shopping</label>
+                <input type="text" value="Grocery Shopping">
+                <input type="datetime-local" id="editDate" value="10/22/2014">
+                <select id="editPriority" class="priority">
+                    <option>-</option>
+                    <option>1 !!!</option>
+                    <option>2 !!</option>
+                    <option>3 !</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </li>
+
+        </ul>
+
+        <h3>Completed.Tasks</h3>
+        <ul id="completed-tasks" class="">
+            <li class= "task-item">
+                <input type="checkbox" checked>
+                <label>Doctor Appt.</label>
+                <span class = "dueDate">10/06/2014</span>
+                <span class="taskPriority">1 !!!</span>
+                <input type="text">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>

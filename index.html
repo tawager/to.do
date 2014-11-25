@@ -5,16 +5,15 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="liststyle.css" type="text/css" media="screen" charset="utf-8">
-    <script src="jquery-2.1.1.min.js"></script>
 </head>
 <body>
 <div class = "appBackground">
     <img src="logoAP.JPG" class="todoLogo" title="todoLogo">
 <div class="newEventForm">
-    <p>
+    <div class="new_event">
         <label for="new-task">New.Task</label>
         <input id="new-task" type="text" value="task">
-        <input id="new-date" type="datetime-local">
+        <input id="new-date" type="datetime-local" value="due date">
         <label for = "setPriority">Priority</label>
         <select id="setPriority" class="priority">
             <option>-</option>
@@ -25,7 +24,7 @@
             <option>5</option>
         </select>
         <button>Create</button>
-    </p>
+    </div>
 
     <h2>To.Do</h2>
     <ul id="incomplete-tasks">
@@ -73,6 +72,6 @@
 </div>
 
 <script type="text/javascript" src="actions.js"></script>
-
+<script type="text/javascript" src=“https://code.jquery.com/jquery-1.11.0.min.js"></script>
 </body>
 </html>

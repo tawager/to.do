@@ -1,15 +1,21 @@
-/* Basic Style */
+/*
+88""Yb    db    .dP"Y8 88  dP""b8
+88__dP   dPYb   `Ybo." 88 dP   `"
+88""Yb  dP__Yb  o.`Y8b 88 Yb
+88oodP dP""""Yb 8bodP' 88  YboodP
+*/
 body {
-    background-color: #dddddd;
+    background: url("Staffagepl-5323.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     font-family: Oswald, sans-serif;
-    height: 100%;
-
+    height: 100vh;
+    color: white;
 }
-
 .appBackground {
     position: absolute;
-    /*background-color: black;*/
     background-color: #dddddd;
+    /*background-color: #dddddd;*/
     width: 100%;
     height: 100%;
     top: 0;
@@ -17,50 +23,204 @@ body {
     bottom: 0;
     left: 0;
 }
-
 .todoLogo {
     position: relative;
     left: 50px;
     top: 50px;
     display: inline-block;
     height: 350px;
-    /*box-shadow: 0 0 30px 0 rgba(255, 255, 255, 1);*/
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .6);
+    box-shadow: 1px 1px 2px black, 0 0 30px 0 rgb(255, 255, 255);
+    /*box-shadow: 0 0 30px 0 rgba(0, 0, 0, .6);*/
 }
-
-
+.jumbotron {
+    background: url("logoRP.JPG") no-repeat;
+    background-size: contain;
+    height: 350px;
+    width: 350px;
+    box-shadow: 1px 1px 2px black, 0 0 10px 0 rgb(255, 255, 255);
+    /*box-shadow: 0 0 30px 0 rgba(0, 0, 0, .6);*/
+    justify-content: center;
+    display: inline-block;
+    z-index: 200;
+}
+#banner_photo {
+    top: 61px;
+    position: absolute;
+    right: 14.5%;
+    display: inline-block;
+    float: right;
+    height: 350px;
+    width: 700px;
+    margin: 10px;
+    padding: 0;
+    border: 5px solid white;
+    box-shadow: 1px 1px 2px black, 0 0 10px 0 rgb(255, 255, 255);
+    border-radius: 6px;
+    z-index: 1;
+}
+#profile_photo {
+    position: relative;
+    top: 104px;
+    left: 172%;
+    height: 270px;
+    width: 180px;
+    border: 5px solid white;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    border-radius: 6px;
+    z-index: 201;
+}
+#taskFormLaunch {
+    float: right;
+    background-image: -webkit-linear-gradient(top,rgb(150, 60, 60) 0,rgb(134, 0, 0) 100%);
+    background-image: -o-linear-gradient(top,rgb(150, 60, 60) 0,rgb(134, 0, 0) 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgb(150, 60, 60)),to(rgb(134, 0, 0)));
+    background-image: linear-gradient(to bottom,rgb(150, 60, 60) 0,rgb(134, 0, 0) 100%);
+    color: white;
+    margin-top: 45px;
+}
 .newEventForm {
     display: block;
     background: #fff;
-    width: 650px;
+    width: 450px;
     height: 100%;
     margin: -300px auto 0;
     padding: 0 10px;
     position: relative;
     /*box-shadow: 0 0 30px 0 rgba(255, 255, 255, 1);*/
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, .6);
-
-
 }
-ul {
+/*
+888888 888888 Yb  dP 888888
+  88   88__    YbdP    88
+  88   88""    dPYb    88
+  88   888888 dP  Yb   88
+*/
+h2,
+h3,
+label[for='new-task'] {
+    border-bottom: 2px solid  white;
+    text-transform: uppercase;
+    padding: 30px 0 10px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
+}
+h2 {
+    padding-top: 70px;
+    color: rgb(134, 0, 0);
+    font-size: 2.8em;
+    text-shadow: 1px 1px 2px black,  0 0 0.2em white;
+}
+h3,
+label[for='new-task'] {
+    font-size: 2em;
+}
+h3 {
+    color: rgb(134, 0, 0);
+    text-shadow: 1px 1px 2px black,  0 0 0.2em white;
+}
+input[type="text"] {
+    margin: 0;
+    font-size: 1.3em;
+    line-height: 2em;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Oswald, sans-serif;
+    color: #888;
+}
+input[type="text"]:focus {
+    color: #333;
+}
+/*
+88b 88 888888 Yb        dP     888888    db    .dP"Y8 88  dP
+88Yb88 88__    Yb  db  dP        88     dPYb   `Ybo." 88odP
+88 Y88 88""     YbdPYbdP         88    dP__Yb  o.`Y8b 88"Yb
+88  Y8 888888    YP  YP          88   dP""""Yb 8bodP' 88  Yb
+*/
+label[for='new-task'] {
+    display: block;
+    margin: 0 0 20px;
+}
+input#new-task {
+    float: left;
+    width: 200px;
+}
+input#new-date {
+    float: left;
+    width: 150px;
+    margin: 0 0 0 10px;
+    display: inline;
+    line-height: 24px;
+    height: 32px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #888;
+    border-radius: 6px;
+    font-family: Oswald, sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+#setPriority {
+    display: inline;
+    margin: 0 5px 0 50px;
+    padding: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 24px;
+}
+label[for='setPriority'] {
+    font-size: 24px;
+    font-weight: 400;
+    font-variant: small-caps;
+    display: inline;
+    position: absolute;
+    right:  146px;
+    top:  64px;
+}
+select > option {
+    font-family: Oswald, sans-serif;
+    font-size: 2em;
+}
+div.new_event {
+    position: relative;
+}
+div.new_event > button:hover {
+    color: #0FC57C;
+}
+/*
+888888    db    .dP"Y8 88  dP     88     88 .dP"Y8 888888 .dP"Y8
+  88     dPYb   `Ybo." 88odP      88     88 `Ybo."   88   `Ybo."
+  88    dP__Yb  o.`Y8b 88"Yb      88  .o 88 o.`Y8b   88   o.`Y8b
+  88   dP""""Yb 8bodP' 88  Yb     88ood8 88 8bodP'   88   8bodP'
+*/
+ul#completed-tasks,
+ul#incomplete-tasks {
     margin: 0;
     padding: 0;
 }
-li * {
+ul#completed-tasks li *,
+ul#incomplete-tasks li * {
     float: left;
 }
-li, h3 {
+ul#completed-tasks li,
+ul#incomplete-tasks li, h3 {
     clear:both;
     list-style:none;
+    background: none;
 }
-input, button {
+ul#completed-tasks li input,
+ul#incomplete-tasks li input {
     outline: none;
 }
-button {
+ul#completed-tasks li button,
+ul#incomplete-tasks li button {
     background: none;
     border: 0;
     color: #888;
-    font-size: 15px;
+    font-size: 18px;
     width: 60px;
     margin: 10px 0 0;
     font-family: Oswald, sans-serif;
@@ -70,148 +230,57 @@ button {
 button:hover {
     color: #333;
 }
-
-
-/* Heading */
-
-h2,
-h3,
-label[for='new-task'] {
-    border-bottom: 2px solid #333;
-    text-transform: uppercase;
-    padding: 30px 0 10px;
-    color: #333;
-    font-weight: 700;
-    margin: 0;
+ul#completed-tasks li button.delete:hover,
+ul#incomplete-tasks li button.delete:hover {
+     color: rgb(150, 60, 60);
 }
-
-h2 {
-    padding-top: 70px;
-}
-
-h3,
-label[for='new-task'] {
-
-    font-size: 15px;
-}
-
-input[type="text"] {
-    margin: 0;
-    font-size: 18px;
-    line-height: 18px;
-    height: 18px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background: #fff;
-    border-radius: 6px;
-    font-family: Oswald, sans-serif;
-    color: #888;
-}
-
-input[type="text"]:focus {
-    color: #333;
-}
-
-/* New Task */
-label[for='new-task'] {
-    display: block;
-    margin: 0 0 20px;
-}
-
-input#new-task {
-    float: left;
-    width: 200px;
-}
-
-input#new-date {
-    float: left;
-    width: 150px;
-    margin: 0 0 0 10px;
-    display: inline;
-    line-height: 18px;
-    height: 18px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background: #fff;
-    color: #888;
-    border-radius: 6px;
-    font-family: Oswald, sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-}
-
-#setPriority {
-    display: inline;
-    margin: 0 5px 0 50px;
-    padding: 10px;
-    font-family: Oswald, sans-serif;
-    font-size: 18px;
-
-}
-
-label[for='setPriority'] {
-    font-size: 18px;
-    font-weight: 400;
-    font-variant: small-caps;
-    display: inline;
-    position: absolute;
-    left:  464px;
-    bottom: 520px;
-}
-
-
-select > option {
-    font-family: Oswald, sans-serif;
-    font-size: 18px;
-}
-
-p > button:hover {
+ul#completed-tasks li button.edit:hover,
+ul#incomplete-tasks li button.edit:hover {
     color: #0FC57C;
 }
-
-/* Task list */
-li {
+button.edit,
+button.delete {
+    color: white;
+}
+#completed-tasks li,
+#incomplete-tasks li {
     overflow: hidden;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
+    padding: 20px 10px;
+    border-bottom: 1px solid  white;
 }
 li > input[type="checkbox"] {
     margin: 0 10px;
     position: relative;
-    top: 15px;
+    top: 10px;
 }
 li > label {
-    font-size: 18px;
+    font-size: 24px;
     line-height: 40px;
     width: 237px;
     padding: 0 0 0 11px;
+    color: white;
 }
-
 span.dueDate {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 24px;
     position: relative;
-    right: 0px;
-    top:  4px;
+    right: -120px;
+    top:  8px;
     padding: 0;
     margin: 0;
 }
-
 span.taskPriority {
     position: relative;
-    left: 105px;
+    left: 40%;
+    top:  6px;
+    font-size: 24px;
 }
-
 span > button {
     margin-left: -10px;
 }
-
 li >  input[type="text"] {
     width: 200px;
-}
-li > .delete:hover {
-    color: #CF2323;
 }
 
 /* Completed */
@@ -219,50 +288,48 @@ li > .delete:hover {
     text-decoration: line-through;
     color: #888;
 }
-
 #completed-tasks span {
     text-decoration: line-through;
     color: #888;
 }
-
-/* Edit Task */
+/*
+888888 8888b.  88 888888     8b    d8  dP"Yb  8888b.  888888
+88__    8I  Yb 88   88       88b  d88 dP   Yb  8I  Yb 88__
+88""    8I  dY 88   88       88YbdP88 Yb   dP  8I  dY 88""
+888888 8888Y"  88   88       88 YY 88  YbodP  8888Y"  888888
+*/
 ul li input[type=text] {
     display:none;
 }
-
 ul li.editMode input[type=text] {
     display:block;
 }
-
 ul li.editMode label {
     display:none;
 }
-
 ul li input[type=text] {
     display:none;
 }
-
 ul li input[type=datetime-local] {
-    line-height: 18px;
-    height: 18px;
-    padding: 10px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0;
     border: 1px solid #ddd;
     background: #fff;
     color: #888;
     border-radius: 6px;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.3em;
     float: left;
-    width: 150px;
-    margin: 0 0 0 10px;
+    width: 153px;
+    margin: 0 0 0 148px;
     display: inline;
 }
-
 ul li.editMode select {
     display: inline;
-    margin: 8px 5px 0 18px;
-    padding: 10px;
+    margin: 11px 5px 0 26%;
+    padding: 0;
     font-family: Oswald, sans-serif;
-    font-size: 18px;
+    font-size: 1.2em;
 }
